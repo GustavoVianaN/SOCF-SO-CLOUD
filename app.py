@@ -3,7 +3,8 @@ import os
 import psutil
 import platform
 
-APP = Flask(__name__)
+app = Flask(__name__)
+
 
 @APP.get("/metrics")
 def metrics():
