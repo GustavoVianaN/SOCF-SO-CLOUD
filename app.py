@@ -4,9 +4,9 @@ import psutil
 import json
 import platform
 
-APP = Flask(__name__)
+app = Flask(__name__)
 
-@APP.get("/metrics")
+@app.get("/metrics")
 def metrics():
 
     #uso de cpu
@@ -32,7 +32,7 @@ def metrics():
         }
     ])
 
-@APP.get("/info")
+@app.get("/info")
 def info():
     return json.dumps([
         {
